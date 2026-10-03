@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trivia de inteligencia artificial: 10 preguntas sobre historia, conceptos, modelos y ética de la IA.">
+  <title>Trivia IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <!-- Pantalla de inicio -->
+    <section id="screen-start" class="screen">
+      <h1>Trivia IA</h1>
+      <p class="lead">¿Cuánto sabés de inteligencia artificial? Respondé 10 preguntas al azar sobre historia, conceptos, modelos y ética.</p>
+      <p class="best">Mejor puntaje: <strong id="best-start">—</strong></p>
+      <button id="btn-start" class="btn btn-primary">Empezar</button>
+    </section>
+
+    <!-- Pantalla de pregunta -->
+    <section id="screen-quiz" class="screen" hidden>
+      <div class="quiz-header">
+        <span id="progress-text">Pregunta 1 de 10</span>
+        <span>Puntaje: <strong id="score">0</strong></span>
+      </div>
+      <div class="progress" aria-hidden="true"><div id="progress-bar" class="progress-bar"></div></div>
+      <span id="difficulty" class="badge"></span>
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+      <div id="feedback" class="feedback" role="status" aria-live="polite" hidden>
+        <p id="feedback-title" class="feedback-title"></p>
+        <p id="feedback-text"></p>
+      </div>
+      <button id="btn-next" class="btn btn-primary" hidden>Siguiente</button>
+    </section>
+
+    <!-- Pantalla final -->
+    <section id="screen-end" class="screen" hidden>
+      <h1>¡Terminaste!</h1>
+      <p class="final-score"><span id="final-score">0</span> / <span id="final-total">10</span></p>
+      <p id="final-message" class="lead"></p>
+      <p id="new-record" class="record" hidden>¡Nuevo récord!</p>
+      <p class="best">Mejor puntaje: <strong id="best-end">—</strong></p>
+      <button id="btn-restart" class="btn btn-primary">Jugar de nuevo</button>
+    </section>
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
